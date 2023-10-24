@@ -57,7 +57,7 @@
 
 
 ---------------------------------------------------------------
-How to do it with python:
+How to do it with python: (Chat GDP guidences below)
 
 1. Prerequisites:
 
@@ -120,14 +120,9 @@ You can have a Google Doc template that you duplicate and populate with the user
 
 5. Automating the Script:
 
-You can run the Python script daily using a task scheduler. For Windows, you can use Task Scheduler. For Linux, you can use cron jobs.
+You can run the Python script daily using a task scheduler. For Windows, you can use Task Scheduler. 
 
-Notes:
 
-Remember to keep your service account JSON key confidential. Never expose it in public repositories.
-While you can use Gmail's SMTP for sending emails, it has daily limits. For a large number of users, consider using a dedicated email sending service.
-The above process is a basic overview and may require fine-tuning based on exact requirements.
-Remember to always respect privacy laws when handling and storing personal data, especially if it's health-related.
 
 
 
