@@ -57,7 +57,7 @@
 
 
 ---------------------------------------------------------------
-How to do it with python: (Chat GDP guidences below)
+How to do it with python: (Chat GPT guidences below)
 
 1. Prerequisites:
 
