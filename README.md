@@ -1,3 +1,152 @@
+1. Planning and Design:
+
+- Layout: Simple with text input, label, button, background picture, etc.
+
+----------------------
+2. Front-End Development:
+
+- Registration Form: Create an HTML form where users can enter their name, height, weight, and email.
+
+- Reminder Option: Include a checkbox for users to opt-in for free reminders.
+
+- Use CSS for styling and JavaScript (or a library like jQuery) for user interactions.
+
+----------------------
+3. Back-End Development:
+
+- Database: Setup a database
+
+- Sever: A server to handle requests.
+
+- BMI Calculation: After form submission, calculate the BMI and determine health status.
+
+- Email Integration: If the user opts-in for reminders, send them the daily reminders.
+
+----------------------
+4. Email Integration:
+ 
+ - Integrate with an email service provider.
+
+ - After user registration, send the user their BMI and health status.
+
+ - If they've opted for reminders, send them daily emails with the dishes and training challenges.
+
+----------------------
+5. Content for Recommendations:
+
+- Dishes: Maintain a list or database of healthy dishes.
+
+- Training Challenges: Create a list/database of exercises, specifying the duration or repetition count for each.
+
+----------------------
+6. Security:
+
+- Secure your database to prevent unauthorized access.
+
+----------------------
+7. Testing
+
+- Heroku web hosting
+
+- Deploy webpage.
+
+----------------------
+8. Launch!
+
+- Send that shit to the Moon!
+
+
+---------------------------------------------------------------
+How to do it with python:
+
+1. Prerequisites:
+
+- Create a project and enable Google Docs and Google Sheets Api.
+
+- Create a service account an download its JSON key.
+
+- Install Python Packages or upgrade
+
+
+2. Setting up the Spreadsheet on Google Sheets
+
+-Create a new spreadsheet
+
+-Share your spreadsheet with service account email(json key)
+
+- Colums for Name, Height, Weight; Email and Dialogflow for Opt-in reminders.
+
+3.  Python Script: (chat gdp guidelines below)
+
+- Googlesheets connection:
+
+
+import gspread
+from oauth2client.service_account import ServiceAccountCredentials
+
+scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
+creds = ServiceAccountCredentials.from_json_keyfile_name('path_to_service_account.json', scope)
+client = gspread.authorize(creds)
+sheet = client.open('Your_Spreadsheet_Name').sheet1
+
+- Recive user data:
+
+users = sheet.get_all_records()
+
+- Process Data & send emails:
+
+import smtplib
+
+for user in users:
+    name = user["Name"]
+    height = user["Height"]
+    weight = user["Weight"]
+    email = user["Email"]
+    opt_in = user["Opt-in"]
+    
+    bmi = weight / (height/100)**2  # Height is in cm and weight in kg
+
+    # Calculate health status based on BMI...
+
+    # If opted-in, generate dishes and training reminders...
+
+    # Send email (using smtplib or another email library)
+    # Gmail's SMTP for simplicity or another provider
+
+
+4. Google Doc for BMI Info:
+
+You can have a Google Doc template that you duplicate and populate with the user's info. To interact with Google Docs, use the googleapiclient library in Python. You'll need to find placeholders in the doc and replace them with the user's data.
+
+5. Automating the Script:
+
+You can run the Python script daily using a task scheduler. For Windows, you can use Task Scheduler. For Linux, you can use cron jobs.
+
+Notes:
+
+Remember to keep your service account JSON key confidential. Never expose it in public repositories.
+While you can use Gmail's SMTP for sending emails, it has daily limits. For a large number of users, consider using a dedicated email sending service.
+The above process is a basic overview and may require fine-tuning based on exact requirements.
+Remember to always respect privacy laws when handling and storing personal data, especially if it's health-related.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 Welcome,
