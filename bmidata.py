@@ -1,3 +1,4 @@
+#libary to open excel
 import openpyxl
 
 # Connect to excel
@@ -13,6 +14,12 @@ mail = input("Email address: ")
 height = input("Height in centimeters: ")
 weight = input("Weight in kilograms: ")
 
+# Autoget next availible user number
+if sheet.cell(row=2, column=1).value:
+    last_row = sheet.max_row
+    next_user_number = sheet.cell(row=last_row, column=1).value + 1
+else:
+    next_user_number = 1    
 
 
 # Calculate BMI
@@ -22,8 +29,6 @@ bmi = weight_kg / (height_cm / 100) ** 2
 user_bmi = int(bmi)
 print(f"Dear {first_name} your BMI is: {user_bmi}")
 
-
-# Read Data from an Excel Worksheet in Python
 
 #Add data to excel
 sheet.append([first_name, surname, email, height_cm, weight_kg, user_bmi])
