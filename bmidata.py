@@ -31,7 +31,7 @@ print(f"Dear {first_name} your BMI is: {user_bmi}")
 
 
 #Add data to excel
-sheet.append([first_name, surname, email, height_cm, weight_kg, user_bmi])
+sheet.append([next_user_number, first_name, surname, mail, height_cm, weight_kg, user_bmi])
 
 #save data to excel
 workbook.save(filename)
