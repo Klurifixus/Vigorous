@@ -11,8 +11,6 @@ except FileNotFoundError:
     df = pd.DataFrame(columns=columns)    
 
 
-
-
 #Openpyxl is installed? Check if it is installed!
 try:
     import openpyxl
@@ -21,18 +19,23 @@ except ImportError:
     exit()    
 
 
-# User Input
+# User Input Gathering
 first_name = input("First name: ")
 surname = input("Surname: ")
 mail = input("Email address: ")
-height = input("Height in centimeters: ")
-weight = input("Weight in kilograms: ")
 
-
+# User Input for BMI Calculation with error handling
+while True:
+    try:
+        weight_cm = int(input("Weight in kilograms: "))
+        height_kg = float(input("Height in centimeters: "))
+        break
+    except ValueError:
+        print("Please enter a number")
 
 # Calculate BMI
-weight_kg = int(weight)
-height_cm = float(height)
+weight_kg = int(weight_cm)
+height_cm = float(height_kg)
 bmi = weight_kg / (height_cm / 100) ** 2
 user_bmi = int(bmi)
 print(f"Dear {first_name} your BMI is: {user_bmi}")
@@ -59,7 +62,7 @@ new_data = {
     'user_bmi': user_bmi
 }
 
-df = df.append(new_data, ignore_index=True)
+df = df._append(new_data, ignore_index=True)
 
 
 
