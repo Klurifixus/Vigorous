@@ -1,3 +1,52 @@
+what has been done: 
+
+1. Started out with a guide from udemy with some basics from: 100 Days of Code: The Complete Python Pro Bootcamp for 2023 with Angela Wu. this was the startingpoint for me to create a bmi Calculator.
+
+2. Then i watched : https://www.youtube.com/watch?v=4F9jnTDvxv0&list=PLeqKi_WI1m2fp6nZGwlleEFCeb92rS4Q2
+
+* Point 1 and 2 above helped me to start writing the actual code.
+(in additional a have watch all information on codeinstitute for pp3.)
+
+(pretty soon i realized i had problems to read the excelfile). and one of the problem was that i used widows and the system file wasn't accessiblebecause of two installed pythons from an earlier point.)
+
+* Here is how to solve that problem after you first ensured yourself that you have uninstalled all python on your computer and then reinstalled the latest version:
+
+-Add Python to PATH
+    1. Search for "Environment Variables" on your computer.
+    2. Select "Edit the system's environment variables."
+    3. Click on "Environment Variables..." at the bottom right.
+    4. Under "System Variables," look for a variable named "Path" and double-click it.
+    5. Click "New" and add the path to your Python installation and the Scripts folder. Typically, these are: 
+
+    - C:\Users\[YourUsername]\AppData\Local\Programs\Python\[PythonVersion]\
+    - C:\Users\[YourUsername]\AppData\Local\Programs\Python\[PythonVersion]\Scripts\
+    6. Click "OK" until you're back on the desktop.
+
+* Unfortunately in my trails and arrows i had made more problems for my self as i tried to make it work with fist openpyxl then spire.xls and later on with pandas again.
+And while i was trying thing out I installed a Virtual Enviroment (myenv) that made me problems i had problems with how to get ridd of. But after I reInstalled python  
+
+With these commands i finaly made it work in these steps below:
+
+- I gave my self admin- promission to delete the whole myenv folder with all in it in my main branch, this made it delete the files on my computer as well. 
+- C:\Users\XXXXXX\AppData\Local\Programs\Python\Python312\python.exe
+- python -m pip install --upgrade pip
+- python -m pip uninstall pandas openpyxl
+- pip install openpyxl
+- pip install pandas
+
+And after that i was up running again. Now with the purpose of using pandas for the excel files.
+
+
+3. I used inspiration from Alice Yang aswell when i started working with this. A really well done guide.
+https://medium.com/@alice.yang_10652/read-data-from-excel-files-in-python-a-comprehensive-guide-bbf91d38d7c5
+
+
+4. I have to be honest, with out Chat GPT i wouldnt have solved the problems with paths this way. I belive i would have spent a lot of hours finding information but not solved it totaly. And in the end i would have reinstalled my whole computer. Spend hours collecting pages and logins for everything. And now i dont have to. And for being an online student , it is awesome when you dont understand. you just askes what does this do? or give me all values of this style and explain the diffrence or something like that. And thats good enought. Dont trust it completely doe, it has its flaws and sometimes it puts you in the wrong path of finding the answears. 
+
+
+
+
+
 Starting with NVP.
 
 
