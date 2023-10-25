@@ -1,9 +1,15 @@
 import pandas as pd
 
 
-# Load the Excel file into a DataFrame
+# Load the Excel file or create if Non-existing.
 filename = "database.xlsx"
-df = pd.read_excel(filename, engine='openpyxl')
+
+try:
+    df = pd.read_excel(filename, engine='openpyxl')
+except FileNotFoundError:
+    columns = ['user', 'first_name','surname','mail', 'weight_kg', 'height_cm', 'user_bmi']
+    df = pd.DataFrame(columns=columns)    
+
 
 
 
