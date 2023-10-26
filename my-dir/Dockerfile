@@ -1,6 +1,5 @@
 FROM python:3.6-buster
 WORKDIR /app
-COPY requirements.txt .
-RUN pip install -r requirements.txt 
+RUN pip install Flask==1.1.1 
 COPY . .
 CMD ["python", "app.py"]
