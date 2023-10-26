@@ -16,3 +16,4 @@ jobs:
           heroku_app_name: "vigorous" 
           heroku_email: "pirrefixus@gmail.com"
           usedocker: true
+          appdir: "my-dir"
