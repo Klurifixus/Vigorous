@@ -22,6 +22,29 @@ what has been done:
     - C:\Users\[YourUsername]\AppData\Local\Programs\Python\[PythonVersion]\Scripts\
     6. Click "OK" until you're back on the desktop.
 
+--------------------------LINKS------------------------
+
+
+
+How to Create a GitHub Account (2023) - Full Tutorial: https://www.youtube.com/watch?v=Gn3w1UvTx0A
+
+Video about heroku signup: https://www.youtube.com/watch?v=6WREMAr8mS4
+
+- First-Time Git Setup: https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup
+
+- Getting Started on Heroku with Python: https://devcenter.heroku.com/articles/getting-started-with-python#create-and-deploy-the-app
+
+- Link to Download Python: https://www.python.org/downloads/
+
+- Link to Install Python and much more: https://www.python.org/about/gettingstarted/
+
+- Link on how to install Spire.XLS for Python in VS Code: https://www.e-iceblue.com/Tutorials/Python/Spire.XLS-for-Python/Getting-Started/How-to-Install-Spire.XLS-for-Python-in-VS-Code.html
+
+- Link on how to install Pandas for Python in VS Code: https://www.pythoncentral.io/how-to-install-pandas-in-python/
+
+- Link on how to install openpyxl for Python in VS Code: https://www.geeksforgeeks.org/how-to-install-openpyxl-in-python-on-windows/
+
+
 * Unfortunately in my trails and arrows i had made more problems for my self as i tried to make it work with fist openpyxl then spire.xls and later on with pandas again.
 And while i was trying thing out I installed a Virtual Enviroment (myenv) that made me problems i had problems with how to get ridd of. But after I reInstalled python  
 
@@ -47,7 +70,7 @@ https://medium.com/@alice.yang_10652/read-data-from-excel-files-in-python-a-comp
 
 
 
-Starting with NVP.
+-------------Starting with NVP.---------------------
 
 
 
