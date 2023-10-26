@@ -46,6 +46,11 @@ Video about heroku signup: https://www.youtube.com/watch?v=6WREMAr8mS4
 
 - Dockerize Your Python Flask application and deploy it onto Heroku:  https://medium.com/analytics-vidhya/dockerize-your-python-flask-application-and-deploy-it-onto-heroku-650b7a605cc9
 
+- Heroku Deploy: https://github.com/marketplace/actions/deploy-to-heroku#getting-started
+
+
+
+
 * Unfortunately in my trails and arrows i had made more problems for my self as i tried to make it work with fist openpyxl then spire.xls and later on with pandas again.
 And while i was trying thing out I installed a Virtual Enviroment (myenv) that made me problems i had problems with how to get ridd of. But after I reInstalled python  
 
