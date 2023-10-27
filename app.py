@@ -1,8 +1,11 @@
-from flask import Flask, render_template
+from flask import Flask,  request, render_template
 import os
+import pandas as pd
+
+
 app = Flask(__name__)
 @app.route('/')
-def fun():
+def index():
     return render_template('index.html')
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
