@@ -45,7 +45,7 @@ def submit():
     category = ""
     if bmi < 18.5:
         category = "Underweight"
-    elif bmi >= 18.5 and bmi <= 24.9:
+    elif bmi >= 18.6 and bmi <= 24.9:
         category = "Normal"
     elif bmi >= 25 and bmi <= 29.9:
         category = "Overweight"
