@@ -17,7 +17,13 @@ def submit():
     weight_kg = request.form['weight_kg']
     height_cm = request.form['height_cm']
     
+# Read existing data from the Excel file
+try:
+    df = pd.read_excel("database.xlsx")
+except FileExistsError
+    df = pd.DataFrame()
     
+            
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
