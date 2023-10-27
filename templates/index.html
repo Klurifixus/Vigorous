@@ -7,23 +7,24 @@
 </head>
 <body>
     <h1>Vigorous Minder</h1>
-    <form>
-        <label>First Name: </label>
-        <input type="text" name="first_name">
+    <form action="/submit" metod "post" id="bmi-form">
 
-        <label>Surname: </label>
-        <input type="text" name="Surname">
+        <label for="first_name">First Name: </label>
+        <input type="text" name="first_name" required><br>
 
-        <label>Email: </label>
-        <input type="text" name="mail">
+        <label for="surname">Surname: </label>
+        <input type="text" name="surname" required><br>
 
-        <label>Weight in kg: </label>
-        <input type="text" name="weight_kg">
+        <label for="mail">Email: </label>
+        <input type="text" name="mail" required><br>
 
-        <label>Height in cm: </label>
-        <input type="text" name="first_name">
+        <label for="weight_kg">Weight in kg: </label>
+        <input type="text" name="weight_kg" required><br>
 
-        <input type="submit" value="Submit">
+        <label for="first_name">Height in cm: </label>
+        <input type="text" name="first_name" required><br>
+
+        <input type="submit" value="Submit" id="submit-button">
 
         
     </form>
