@@ -23,6 +23,11 @@ try:
 except FileExistsError
     df = pd.DataFrame()
     
+# Add new user data for BMI calculation 
+new_data = {'First Name': first_name,'Surname': [surname],'Mail': [mail], 'Weight in Cm': [weight_kg], 'Height in Kg': [height_cm]} 
+new_df['user_bmi'] = new_df.apply(lambda row: (row['Weight in Kg'] / (row['Height in Cm'] / 100) ** 2)), axis=1)
+
+    
             
 
 if __name__ == '__main__':
