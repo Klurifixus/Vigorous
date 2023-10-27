@@ -1,5 +1,8 @@
 FROM python:3.6-buster
 WORKDIR /app
-RUN pip install Flask==1.1.1 
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
 COPY . .
 CMD ["python", "app.py"]
