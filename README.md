@@ -48,6 +48,8 @@ Video about heroku signup: https://www.youtube.com/watch?v=6WREMAr8mS4
 
 - Heroku Deploy: https://github.com/marketplace/actions/deploy-to-heroku#getting-started
 
+- link to Jquery 3.5.1: https://blog.jquery.com/2020/05/04/jquery-3-5-1-released-fixing-a-regression/
+
 
 
 
