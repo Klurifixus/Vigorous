@@ -33,7 +33,7 @@
     </form>
 
     <!-- Modal -->
-    <div id="modal" class="modal>
+    <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close" id="close-modal">&times;</span>
             <p id=bmi-result"></p>
@@ -55,8 +55,8 @@
                 })
                 .then(response => response.text())
                 .then(data => {
-                    $("#bmi-result").text(data);
-                    $("#modal").css("display", "block");
+                    $("#"bmi-result").text(data);
+                    $("#"modal").css("display", "block");
                     form.reset();
                 });
             });
