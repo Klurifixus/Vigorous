@@ -3,7 +3,8 @@ WORKDIR /app
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
-RUN pip install jquery
+RUN npm install jquery
+
 
 COPY . .
 CMD ["python", "app.py"]
