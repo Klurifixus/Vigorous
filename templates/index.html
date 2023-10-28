@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Pacifico&display=swap">
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
     <title>Vigorous Minder</title>
 </head>
 <body>
@@ -33,40 +34,52 @@
     </form>
 
     <!-- Modal -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close" id="close-modal">&times;</span>
-            <p id=bmi-result"></p>
-        </div>    
-    </div>
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="close-modal">&times;</span>
+        <p id="bmi-result"></p>
+    </div>    
+</div>
 
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
-    <script>
-        $(document).ready(function() {
-            $("#submit-button").click(function(e) {
-                e.preventDefault();
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+<script>
+    $(document).ready(function() {
+        $("#submit-button").click(function(e) {
+            e.preventDefault();
 
-                let form = document.querySelector('#bmi-form');
-                let formData = new FormData(form);
+            let form = document.querySelector('#bmi-form');
+            let formData = new FormData(form);
 
-                fetch("/submit", {
-                    method: "POST",
-                    body: formData
-                })
-                .then(response => response.text())
-                .then(data => {
-                    $("#"bmi-result").text(data);
-                    $("#"modal").css("display", "block");
-                    form.reset();
-                });
-            });
-
-            $("#close-modal").click(function() {
-                $("#modal").css("display", "none");
-
+            fetch("/submit", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                $("#bmi-result").text(data);
+                $("#modal").css("display", "block");
+                form.reset();
             });
         });
-    </script>   
+
+        $("#close-modal").click(function() {
+            $("#modal").css("display", "none");
+        });
+    });
+</script>
+After these corrections, make sure:
+
+You have included the jQuery library, as mentioned in the previous answer.
+The necessary CSS is included to style and hide/show the modal as required.
+The server endpoint /submit is correctly processing the data and returning a result.
+
+
+
+Is this conversation helpful so far?
+
+
+
+   
 
 </body>
 </html>
