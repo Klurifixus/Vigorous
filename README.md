@@ -51,7 +51,7 @@ Video about heroku signup: https://www.youtube.com/watch?v=6WREMAr8mS4
 - link to Jquery 3.5.1: https://blog.jquery.com/2020/05/04/jquery-3-5-1-released-fixing-a-regression/
 
 
-
+* ALL CSS IS FROM CHAT GPT!!!!!
 
 * Unfortunately in my trails and arrows i had made more problems for my self as i tried to make it work with fist openpyxl then spire.xls and later on with pandas again.
 And while i was trying thing out I installed a Virtual Enviroment (myenv) that made me problems i had problems with how to get ridd of. But after I reInstalled python  
