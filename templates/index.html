@@ -42,7 +42,7 @@
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
     <script>
-        $(document).ready(function)() {
+        $(document).ready(function() {
             $("#submit-button").click(function(e) {
                 e.preventDefault();
 
@@ -53,16 +53,16 @@
                     method: "POST",
                     body: formData
                 })
-                .then(response => response.text()
+                .then(response => response.text())
                 .then(data => {
                     $("#bmi-result").text(data);
-                    $("#bmi-modal").css("display", "block");
+                    $("#modal").css("display", "block");
                     form.reset();
                 });
             });
 
             $("#close-modal").click(function() {
-                $("#bmi-modal").css("display", "none");
+                $("#modal").css("display", "none");
 
             });
         });
