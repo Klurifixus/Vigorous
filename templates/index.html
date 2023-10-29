@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Pacifico&display=swap">
@@ -67,7 +69,9 @@
         });
     });
 </script>
-
+$(document).ready(function() {
+    $("#modal").css("display", "block");
+});
 
 
 
