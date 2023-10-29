@@ -28,7 +28,8 @@ h1 {
     top: 0;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1;  /* To ensure h1 is above the form */
+    z-index: 1;  
+    font-family: 'Pacifico', cursive;
 }
 
 form {
