@@ -49,12 +49,11 @@ form {
 }
 
 .vertical-text {
-    writing-mode: vertical-rl;
-    text-transform: uppercase;
-    margin-right: 20px;
-    height: 100%;  /* Set the height equal to the form's height */
-    display: flex;
-    align-items: center;  /* Vertically center the text inside this container */
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    transform-origin: right center;
 }
 
 label, input {
