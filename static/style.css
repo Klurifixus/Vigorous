@@ -6,6 +6,7 @@ body, h1, form {
     text-transform: uppercase;  /* Make all text capitalized */
 }
 
+
 /* Set the background image */
 body {
     background-color: orange;
@@ -18,12 +19,16 @@ body {
     justify-content: center;
 }
 
+.form-container {
+    position: relative;  /* Enable absolute positioning for child elements */
+}
+
 h1 {
-    text-align: center;
-    color: #ffffff;
-    margin-bottom: 40px;
-    font-family: 'Black Ops One', cursive;  
-    text-shadow: 2px 2px 4px #000000;
+    position: absolute;  /* Position h1 over the form */
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;  /* To ensure h1 is above the form */
 }
 
 form {
@@ -36,6 +41,17 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    z-index: 0;
+}
+
+.vertical-text {
+    writing-mode: vertical-rl;
+    text-transform: uppercase;
+    margin-right: 20px;
+    height: 100%;  /* Set the height equal to the form's height */
+    display: flex;
+    align-items: center;  /* Vertically center the text inside this container */
 }
 
 label, input {
@@ -69,11 +85,6 @@ input[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-.vertical-text {
-    writing-mode: vertical-rl;
-    text-transform: uppercase;
-    margin-right: 20px;
-}
 
 /* Modal Styles */
 .modal {
@@ -107,19 +118,117 @@ input[type="submit"]:hover {
     cursor: pointer;
 }
 
-/* Responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 350px) {
+    h1 {
+        font-size: 18px;   /* Slightly reduce font size */
+        margin-bottom: 15px;
+    }
+
+    form {
+        width: 95%;  /* Make form take almost full width */
+        padding: 10px;
+    }
+
+    label, input {
+        width: 100%;  /* Maximize input width */
+        font-size: 12px;   /* Reduce font size for inputs and labels */
+    }
+
+    .modal-content {
+        width: 250px;   /* Adjust modal width */
+    }
+
+    .close {
+        font-size: 18px;   /* Adjust the close button size in the modal */
+    }
+}
+
+/* For other small mobile devices (from 351px to 500px) */
+@media (min-width: 351px) and (max-width: 500px) {
     h1 {
         font-size: 20px;
         margin-bottom: 20px;
     }
 
     form {
-        width: 80%;
-        padding: 10px;
+        width: 90%;  /* Increase form width */
+        padding: 15px;
+    }
+
+    label, input {
+        width: 100%;
+        font-size: 14px;  /* Adjust font size for better readability */
+    }
+
+    .vertical-text {
+        display: none;  /* Hide vertical text on smaller devices */
+    }
+
+    .modal-content {
+        width: 270px;  /* Adjust modal width */
+    }
+}
+
+/* For mobile devices like Galaxy Fold and similar resolutions */
+@media (max-width: 700px) {
+    h1 {
+        font-size: 20px;
+        margin-bottom: 20px;
+        position: static;
+        transform: none;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    form {
+        width: 90%;  /* Slightly increase form width */
+        padding: 15px;
     }
 
     label, input {
         width: 100%;
     }
+
+    .vertical-text {
+        display: none;  /* Hide vertical text for better fit on mobile screens */
+    }
 }
+
+/* For tablets */
+@media (min-width: 701px) and (max-width: 1024px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    form {
+        width: 85%;
+        padding: 15px;
+    }
+
+    label, input {
+        width: 95%;  /* Slightly increased input width */
+    }
+
+    .vertical-text {
+        height: calc(100% - 30px);  /* Adjust the height considering possible size changes */
+    }
+}
+
+/* For small desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    form {
+        width: 80%;
+        padding: 20px;
+    }
+
+    label, input {
+        width: 90%;
+    }
+}
+
+/* For large desktops (beyond 1280px) no specific changes as default styles will be applied */
+
