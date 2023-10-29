@@ -52,7 +52,7 @@ def submit():
     else:
         category = "Obese"
 
-    return f'Your BMI is {bmi} and your BMI category is {category}'
+    return f'Your BMI is {bmi} and that makes you {category}'
 
 # Run flask to Heroku
 if __name__ == '__main__':
