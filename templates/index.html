@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Pacifico&display=swap">
+
+    <title>Vigorous Minder</title>
+</head>
+<body>
+    
+    
+    
+
+    <div class="main-container"> 
+        <h1 class="vertical-text">Vigorous Minder</h1>
+        
+        <div class="form-container">
+            <form action="/submit" method="post" id="bmi-form">
+
+                <label for="first_name">First Name: </label>
+                <input type="text" name="first_name" required id="first_name" placeholder="Enter your first name"><br>
+
+                <label for="surname">Surname: </label>
+                <input type="text" name="surname" required id="surname" placeholder="Enter your surname"><br>
+
+                <label for="mail">Email: </label>
+                <input type="email" name="mail" required id="mail" placeholder="Enter your email adress"><br>
+
+                <label for="weight_kg">Weight in kg: </label>
+                <input type="number" name="weight_kg" required id="weight_kg" placeholder="Enter your weight in kg"><br>
+
+                <label for="height_cm">Height in cm: </label>
+                <input type="number" name="height_cm" required id="height_cm" placeholder="Enter your height in cm"><br>
+
+                <input type="submit" value="Submit" id="submit-button">
+
+            </form>
+        </div>
+        <h1 class= "aboveh1">BMI Calculator</h1>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-modal">&times;</span>
+            <p id="bmi-result"></p>
+        </div>    
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            $("#submit-button").click(function(e) {
+                e.preventDefault();
+
+                let form = document.querySelector('#bmi-form');
+                let formData = new FormData(form);
+
+                fetch("/submit", {
+                    method: "POST",
+                    body: formData
+                })
+                .then(response => response.text())
+                .then(data => {
+                    $("#bmi-result").text(data);
+                    $("#modal").css("display", "block");
+                    form.reset();
+                });
+            });
+
+            $("#close-modal").click(function() {
+                $("#modal").css("display", "none");
+            });
+        });
+    </script>
+</body>
+</html>
