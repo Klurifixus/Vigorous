@@ -20,20 +20,43 @@ body {
     line-height: 1.5;
 }
 
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+}
+
 .form-container {
-    position: relative;  /* Enable absolute positioning for child elements */
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.vertical-text {
+    position: absolute;
+    right: -25%;
+    top: 50%;
+    transform: translateY(-50%) rotate(270deg);
+    transform-origin: right center;
+    white-space: nowrap;
 }
 
 .aboveh1 {
-    position: absolute;  /* Position h1 over the form */
+    position: absolute; 
     top: 0;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 2;  /* Ensure it stays on top */
+    z-index: 2;
     font-family: 'Black Ops One', cursive;
     text-align: center;
     color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.7); /* For better visibility */
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 5px;
     border-radius: 8px;
 }
@@ -50,15 +73,6 @@ form {
     align-items: center;
     position: relative;
     z-index: 1;
-}
-
-.vertical-text {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%) rotate(270deg); /* Change rotation to 270deg */
-    transform-origin: right center;
-    white-space: nowrap;
 }
 
 label, input {
@@ -124,75 +138,76 @@ input[type="submit"]:hover {
     cursor: pointer;
 }
 
-@media (max-width: 350px) {
+@media (max-width: 380px) {
+    .vertical-text {
+        display: none;
+    }
+
     .form-container {
         margin-top: 20px;
     }
 
     .aboveh1 {
         position: static;
-        transform: none; 
-        text-align: center; 
+        transform: none;
         margin-bottom: 10px;
         z-index: 3;
     }
 
     form {
-        width: 95%;  /* Make form take almost full width */
+        width: 95%;
         padding: 10px;
     }
 
     label, input {
-        width: 100%;  /* Maximize input width */
-        font-size: 12px;   /* Reduce font size for inputs and labels */
+        width: 100%;
+        font-size: 12px;
     }
 
     .modal-content {
-        width: 250px;   /* Adjust modal width */
+        width: 250px;
     }
 
     .close {
-        font-size: 18px;   /* Adjust the close button size in the modal */
+        font-size: 18px;
     }
 }
 
 @media (min-width: 351px) and (max-width: 500px) {
     .aboveh1 {
-        font-size: 20px;
-        margin-bottom: 20px;
+        position: static;
+        transform: none;
+        margin-bottom: 10px;
     }
 
     form {
-        width: 90%;  /* Increase form width */
+        width: 90%;
         padding: 15px;
     }
 
     label, input {
         width: 100%;
-        font-size: 14px;  /* Adjust font size for better readability */
+        font-size: 14px;
     }
 
     .vertical-text {
-        display: none;  /* Hide vertical text on smaller devices */
+        display: none;
     }
 
     .modal-content {
-        width: 270px;  /* Adjust modal width */
+        width: 270px;
     }
 }
 
 @media (max-width: 700px) {
     .aboveh1 {
-        font-size: 20px;
-        margin-bottom: 20px;
         position: static;
         transform: none;
-        text-align: center;
         margin-bottom: 10px;
     }
 
     form {
-        width: 90%;  /* Slightly increase form width */
+        width: 90%;
         padding: 15px;
     }
 
@@ -201,7 +216,7 @@ input[type="submit"]:hover {
     }
 
     .vertical-text {
-        display: none;  /* Hide vertical text for better fit on mobile screens */
+        display: none;
     }
 }
 
@@ -216,11 +231,11 @@ input[type="submit"]:hover {
     }
 
     label, input {
-        width: 95%;  /* Slightly increased input width */
+        width: 95%;
     }
 
     .vertical-text {
-        height: calc(100% - 30px);  /* Adjust the height considering possible size changes */
+        height: calc(100% - 30px);
     }
 }
 
