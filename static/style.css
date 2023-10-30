@@ -30,8 +30,10 @@ h1 {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Black Ops One', cursive;
     text-align: center;
+    color: #ffffff;
+    
 }
 
 form {
