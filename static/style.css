@@ -24,16 +24,18 @@ body {
     position: relative;  /* Enable absolute positioning for child elements */
 }
 
-h1 {
+.aboveh1 {
     position: absolute;  /* Position h1 over the form */
     top: 0;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1;
+    z-index: 2;  /* Ensure it stays on top */
     font-family: 'Black Ops One', cursive;
     text-align: center;
     color: #ffffff;
-    
+    background-color: rgba(0, 0, 0, 0.7); /* For better visibility */
+    padding: 5px;
+    border-radius: 8px;
 }
 
 form {
@@ -47,7 +49,7 @@ form {
     flex-direction: column;
     align-items: center;
     position: relative;
-    z-index: 0;
+    z-index: 1;
 }
 
 .vertical-text {
@@ -94,7 +96,7 @@ input[type="submit"]:hover {
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     left: 0;
     top: 0;
     width: 100%;
@@ -127,11 +129,12 @@ input[type="submit"]:hover {
         margin-top: 20px;
     }
 
-    h1 {
+    .aboveh1 {
         position: static;
         transform: none; 
         text-align: center; 
         margin-bottom: 10px;
+        z-index: 3;
     }
 
     form {
@@ -153,9 +156,8 @@ input[type="submit"]:hover {
     }
 }
 
-/* For other small mobile devices (from 351px to 500px) */
 @media (min-width: 351px) and (max-width: 500px) {
-    h1 {
+    .aboveh1 {
         font-size: 20px;
         margin-bottom: 20px;
     }
@@ -179,9 +181,8 @@ input[type="submit"]:hover {
     }
 }
 
-/* For mobile devices like Galaxy Fold and similar resolutions */
 @media (max-width: 700px) {
-    h1 {
+    .aboveh1 {
         font-size: 20px;
         margin-bottom: 20px;
         position: static;
@@ -204,9 +205,8 @@ input[type="submit"]:hover {
     }
 }
 
-/* For tablets */
 @media (min-width: 701px) and (max-width: 1024px) {
-    h1 {
+    .aboveh1 {
         font-size: 24px;
     }
 
@@ -224,9 +224,8 @@ input[type="submit"]:hover {
     }
 }
 
-/* For small desktops */
 @media (min-width: 1025px) and (max-width: 1280px) {
-    h1 {
+    .aboveh1 {
         font-size: 28px;
     }
 
@@ -239,5 +238,3 @@ input[type="submit"]:hover {
         width: 90%;
     }
 }
-
-/* For large desktops (beyond 1280px) no specific changes as default styles will be applied */
