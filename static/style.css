@@ -174,10 +174,6 @@ input[type="submit"]:hover {
     }
 
     .vertical-text {
-        position: absolute;
-        top: 50%;
-        left: -5%;
-        transform: translateY(-50%) rotate(270deg);
         z-index: 2;
         font-family: 'Black Ops One', cursive;
         text-align: center;
@@ -207,10 +203,6 @@ input[type="submit"]:hover {
     }
 
     .vertical-text {
-        position: absolute;
-        top: 50%;
-        left: -5%;
-        transform: translateY(-50%) rotate(270deg);
         z-index: 2;
         font-family: 'Black Ops One', cursive;
         text-align: center;
@@ -240,10 +232,6 @@ input[type="submit"]:hover {
     }
 
     .vertical-text {
-        position: absolute;
-        top: 50%;
-        left: -5%;
-        transform: translateY(-50%) rotate(270deg);
         z-index: 2;
         font-family: 'Black Ops One', cursive;
         text-align: center;
