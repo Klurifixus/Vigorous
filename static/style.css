@@ -3,7 +3,7 @@ body, h1, form {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    text-transform: uppercase;  /* Make all text capitalized */
+    text-transform: uppercase; 
 }
 
 /* Set the background image */
@@ -49,7 +49,7 @@ body {
     white-space: nowrap;
 }
 
-.aboveh1 { 
+.aboveh1 {
     top: 0;
     left: 50%;
     z-index: 2;
@@ -67,7 +67,7 @@ form {
     border-radius: 8px;
     width: 100%;
     max-width: 400px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,7 +75,8 @@ form {
     z-index: 1;
 }
 
-label, input {
+label,
+input {
     display: block;
     width: 80%;
     margin-bottom: 10px;
@@ -92,7 +93,7 @@ input {
 
 input:focus {
     outline: none;
-    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 input[type="submit"] {
@@ -103,7 +104,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #f5c638;
 }
 
 /* Modal Styles */
@@ -139,8 +140,8 @@ input[type="submit"]:hover {
 }
 
 /* Media Queries */
-@media (max-width: 1280px) {
-    /* Styles for screens up to 1280px width */
+@media (max-width: 1028px) {
+    /* Styles for screens up to 1028px width */
     .aboveh1 {
         font-size: 28px;
     }
@@ -150,7 +151,8 @@ input[type="submit"]:hover {
         padding: 20px;
     }
 
-    label, input {
+    label,
+    input {
         width: 90%;
     }
 }
@@ -166,14 +168,15 @@ input[type="submit"]:hover {
         padding: 15px;
     }
 
-    label, input {
+    label,
+    input {
         width: 95%;
     }
 
     .vertical-text {
         position: absolute;
         top: 50%;
-        left: -5%; /* Adjust the value as needed */
+        left: -5%;
         transform: translateY(-50%) rotate(270deg);
         z-index: 2;
         font-family: 'Black Ops One', cursive;
@@ -183,70 +186,72 @@ input[type="submit"]:hover {
         padding: 5px;
         border-radius: 8px;
         white-space: nowrap;
+        font-size: 16px;
     }
 }
 
-@media (min-width: 351px) and (max-width: 500px) {
-    /* Styles for screens between 351px and 500px width */
+@media (max-width: 500px) {
+    /* Styles for screens up to 500px width */
     .aboveh1 {
-        position: static;
-        transform: none;
-        margin-bottom: 10px;
+        font-size: 24px;
     }
 
     form {
-        width: 90%;
+        width: 85%;
         padding: 15px;
     }
 
-    label, input {
-        width: 100%;
-        font-size: 14px;
+    label,
+    input {
+        width: 95%;
     }
 
     .vertical-text {
-        right: -15%; 
-        font-size: 12px; 
-    }
-
-    .modal-content {
-        width: 270px;
+        position: absolute;
+        top: 50%;
+        left: -5%;
+        transform: translateY(-50%) rotate(270deg);
+        z-index: 2;
+        font-family: 'Black Ops One', cursive;
+        text-align: center;
+        color: #ffffff;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 5px;
+        border-radius: 8px;
+        white-space: nowrap;
+        font-size: 16px;
     }
 }
 
-@media (max-width: 380px) {
-    /* Styles for screens up to 380px width */
-    .vertical-text {
-        right: -20%; 
-        font-size: 10px; 
-    }
-
-    .form-container {
-        margin-top: 20px;
-    }
-
+@media (max-width: 350px) {
+    /* Styles for screens up to 350px width */
     .aboveh1 {
-        position: static;
-        transform: none;
-        margin-bottom: 10px;
-        z-index: 3;
+        font-size: 24px;
     }
 
     form {
+        width: 85%;
+        padding: 15px;
+    }
+
+    label,
+    input {
         width: 95%;
-        padding: 10px;
     }
 
-    label, input {
-        width: 100%;
-        font-size: 12px;
-    }
-
-    .modal-content {
-        width: 250px;
-    }
-
-    .close {
-        font-size: 18px;
+    .vertical-text {
+        position: absolute;
+        top: 50%;
+        left: -5%;
+        transform: translateY(-50%) rotate(270deg);
+        z-index: 2;
+        font-family: 'Black Ops One', cursive;
+        text-align: center;
+        color: #ffffff;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 5px;
+        border-radius: 8px;
+        white-space: nowrap;
+        font-size: 16px;
     }
 }
