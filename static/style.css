@@ -39,11 +39,17 @@ body {
 }
 
 .vertical-text {
-    position: absolute;
-    right: -25%;
+    position: absolute; 
     top: 50%;
+    right: -5%;
     transform: translateY(-50%) rotate(270deg);
-    transform-origin: right center;
+    z-index: 2;
+    font-family: 'Black Ops One', cursive;
+    text-align: center;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px;
+    border-radius: 8px;
     white-space: nowrap;
 }
 
@@ -140,7 +146,8 @@ input[type="submit"]:hover {
 
 @media (max-width: 380px) {
     .vertical-text {
-        display: none;
+        right: -20%; 
+        font-size: 10px; 
     }
 
     .form-container {
@@ -191,7 +198,8 @@ input[type="submit"]:hover {
     }
 
     .vertical-text {
-        display: none;
+        right: -15%; 
+        font-size: 12px; 
     }
 
     .modal-content {
@@ -235,7 +243,8 @@ input[type="submit"]:hover {
     }
 
     .vertical-text {
-        height: calc(100% - 30px);
+        right: -10%; 
+        font-size: 14px; 
     }
 }
 
